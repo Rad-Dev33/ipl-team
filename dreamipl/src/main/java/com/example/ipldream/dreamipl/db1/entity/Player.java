@@ -1,0 +1,110 @@
+package com.example.ipldream.dreamipl.db1.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "players")
+@Data
+public class Player {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name="player_name")
+	private String PlayerName;
+	
+	@Column(name="team")
+	private String team;
+	
+	@Column(name="points")
+	private double Points;
+	
+	@Column(name = "points_per_match")
+	private double PointsPerMatch;
+	
+
+		
+		@Column(name="half_centuries")
+	    private int HalfCenturies;
+		
+		  @Column(name = "innings")
+		    private int Innings;
+	    
+	    @Column(name = "fours")
+	    private int Fours;
+
+	    @Column(name = "sixes")
+	    private int Sixes;
+
+	    @Column(name = "avg")
+	    private double Average;
+
+	    @Column(name = "strike_rate")
+	    private double StrikeRate;
+
+	    @Column(name = "runs_per_innings")
+	    private double RunsPerInnings;
+
+	    @Column(name = "fours_per_innings")
+	    private double FoursPerInnings;
+
+	    @Column(name = "sixes_per_innings")
+	    private double SixesPerInnings;
+
+	    @Column(name = "ones_twos_per_innings")
+	    private double OnesAndTwosPerInnings;
+
+	    @Column(name = "half_centuries_per_innings")
+	    private double HalfCenturiesPerInnings;
+
+	    @Column(name = "centuries_per_innings")
+	    private double CenturiesPerInnings;
+
+	    @Column(name = "runs_per_ball")
+	    private double RunsPerBall;
+
+	    @Column(name = "fours_percentage")
+	    private double FoursPercentage;
+
+	    @Column(name = "sixes_percentage")
+	    private double SixesPercentage;
+
+	    @Column(name = "total_boundary_percentage")
+	    private double TotalBoundaryPercentage;
+
+	    @Column(name = "balls_per_boundary")
+	    private double BallsPerBoundary;
+
+	    @Column(name = "balls_per_four")
+	    private double BallsPerFour;
+
+	    @Column(name = "balls_per_six")
+	    private double BallsPerSix;
+	    
+	    @Column(name = "weighted_ppm")
+		private double Weightedppm;
+	    
+	    @Column(name = "adjusted_ppm")
+		private double Adjustedppm;
+	    
+	    @Column(name = "experience_boosted_ppm")
+		private double ExperienceBoostedppm;
+	    
+	    @Column(name="total_sum")
+	    private double TotalSum;
+
+
+
+	
+
+
+	
+
+}

@@ -1,0 +1,30 @@
+package com.example.ipldream.dreamipl.db3.entity;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "team_match")
+public class Team_match {
+	
+	@Id
+	private long id;
+	String stadium;
+	String city;
+	
+	@Column(name = "match_date")
+	LocalDate matchdate;
+	@Column(name = "match_time")
+	LocalTime matchtime;
+	String team1;
+	String team2;
+	
+
+}

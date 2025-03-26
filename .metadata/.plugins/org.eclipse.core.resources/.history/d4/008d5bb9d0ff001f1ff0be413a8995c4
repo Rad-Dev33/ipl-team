@@ -1,0 +1,32 @@
+package com.example.ipldream.dreamipl;
+
+import javax.sql.DataSource;
+
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
+
+public class DataConfig {
+	
+	@Primary
+    @Bean(name = "db1DataSource")
+    public DataSource db1DataSource() {
+        return DataSourceBuilder.create()
+                .url("jdbc:mysql://localhost:3306/ipl_batting_data")
+                .username("root")
+                .password("root")
+                .driverClassName("com.mysql.cj.jdbc.Driver")
+                .build();
+    }
+
+    @Bean(name = "db2DataSource")
+    public DataSource db2DataSource() {
+        return DataSourceBuilder.create()
+                .url("jdbc:mysql://localhost:3306/ipl_bowling_data")
+                .username("root")
+                .password("root")
+                .driverClassName("com.mysql.cj.jdbc.Driver")
+                .build();
+    }
+
+}

@@ -1,0 +1,85 @@
+package com.example.ipldream.dreamipl.db1.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name = "players")
+@Data
+public class Player {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String player_name;
+	private String team;
+	private double points;
+	private double points_per_match;
+	
+
+
+	    private int halfCenturies;
+	    @Column(name = "fours")
+	    private int fours;
+
+	    @Column(name = "sixes")
+	    private int sixes;
+
+	    @Column(name = "avg")
+	    private double avg;
+
+	    @Column(name = "strike_rate")
+	    private double sr;
+
+	    @Column(name = "runs_per_innings")
+	    private double runsPerInnings;
+
+	    @Column(name = "fours_per_innings")
+	    private double foursPerInnings;
+
+	    @Column(name = "sixes_per_innings")
+	    private double sixesPerInnings;
+
+	    @Column(name = "ones_twos_per_innings")
+	    private double onesAndTwosPerInnings;
+
+	    @Column(name = "half_centuries_per_innings")
+	    private double halfCenturiesPerInnings;
+
+	    @Column(name = "centuries_per_innings")
+	    private double centuriesPerInnings;
+
+	    @Column(name = "runs_per_ball")
+	    private double runsPerBall;
+
+	    @Column(name = "fours_percentage")
+	    private double foursPercentage;
+
+	    @Column(name = "sixes_percentage")
+	    private double sixesPercentage;
+
+	    @Column(name = "total_boundary_percentage")
+	    private double totalBoundaryPercentage;
+
+	    @Column(name = "balls_per_boundary")
+	    private double ballsPerBoundary;
+
+	    @Column(name = "balls_per_four")
+	    private double ballsPerFour;
+
+	    @Column(name = "balls_per_six")
+	    private double ballsPerSix;
+
+
+
+	
+
+
+	
+
+}
